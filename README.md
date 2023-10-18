@@ -38,7 +38,7 @@ P.S:This is challenge 2 — Pizza runner of the 8 Weeks SQL Challenge by Danny M
 ## Data wrangling
 
 ### Data collection and database creation
-Danny has a few years of experience as a data scientist and is therefore aware that data collection was going to be critical for his business’ growth. He has provided a subset of his data for the purpose of this analysis. I used MySQL Workbench to create a database for Danny's Diner and for the entire analysis. 
+Danny has a few years of experience as a data scientist and is therefore aware that data collection was going to be critical for his business’ growth. He has provided a subset of his data for the purpose of this analysis. I used MySQL Workbench to create a database for Pizza runner and for the entire analysis. Below is the Entity Relationship Digram (ERD) for the tables provided
 
 ### Exploratory data analysis
 
