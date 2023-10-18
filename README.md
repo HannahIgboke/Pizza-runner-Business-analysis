@@ -2,6 +2,19 @@
 
 ## Table of contents
 
+- Introduction
+- Data wrangling
+  - Data collection and database creation
+  - Exploratory data analysis
+  - Data cleaning and processing
+- Data analysis
+  - Pizza metrics: results, data visualization and recommendations
+  - Runner and customer experience: results, data visualization and recommendations
+  - Ingredient optimization: results, data visualization and recommendations
+  - Pricing and ratings: results, data visualization and recommendations
+  - Other required datasets
+- Conclusion and Limitations
+
 ## Introduction
 
 Danny was browsing Instagram when he saw an ad for 80s retro styling and pizza. He loved the idea, but he knew he needed to do more than just sell pizza to get seed funding for his new business. So, he decided to Uberize it and create Pizza Runner, a pizza delivery service.
