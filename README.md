@@ -38,10 +38,11 @@ P.S:This is challenge 2 — Pizza runner of the 8 Weeks SQL Challenge by Danny M
 ## Data wrangling
 
 ### Data collection and database creation
-
+Danny has a few years of experience as a data scientist and is therefore aware that data collection was going to be critical for his business’ growth. He has provided a subset of his data for the purpose of this analysis. I used MySQL Workbench to create a database for Danny's Diner and for the entire analysis. 
 
 ### Exploratory data analysis
 
+I carried out an EDA to have a investigate the data, identify loopholes and understand the relationship between tables. On inspection, I observed some inconsistencies in data types, formatting and the preence of null values which needed to be accounted for.
 
 ### Data cleaning and processing
 
