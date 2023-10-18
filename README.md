@@ -3,6 +3,8 @@
 ## Table of contents
 
 - Introduction
+- Problem statement
+- Skills demonstrated
 - Data wrangling
   - Data collection and database creation
   - Exploratory data analysis
@@ -22,3 +24,24 @@ Danny started by recruiting runners to deliver pizza from his house, which serve
 
 
 P.S:This is challenge 2 — Pizza runner of the 8 Weeks SQL Challenge by Danny Ma.
+
+## Problem statement
+
+
+## Skills demonstrated
+
+- Data wrangling in MySQL
+- Power BI
+- Project documentation
+
+
+## Data wrangling
+
+### Data collection and database creation
+
+
+### Exploratory data analysis
+
+
+### Data cleaning and processing
+
