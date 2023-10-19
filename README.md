@@ -42,7 +42,7 @@ Danny has a few years of experience as a data scientist and is therefore aware t
 
 ### Exploratory data analysis
 
-I carried out an EDA to have a investigate the data, identify loopholes and understand the relationship between tables. On inspection, I observed some inconsistencies in data types, formatting and the preence of null values which needed to be accounted for.
+I carried out an EDA to investigate the data, identify loopholes and understand the relationship between tables. On inspection, I observed some inconsistencies in data types, formatting and the preence of null values which needed to be accounted for. After my EDA I proceeded to cleaning my data.
 
 ### Data cleaning and processing
 
