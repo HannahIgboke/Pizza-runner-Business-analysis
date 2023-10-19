@@ -44,5 +44,20 @@ Danny has a few years of experience as a data scientist and is therefore aware t
 
 I carried out an EDA to investigate the data, identify loopholes and understand the relationship between tables. On inspection, I observed some inconsistencies in data types, formatting and the preence of null values which needed to be accounted for. After my EDA I proceeded to cleaning my data.
 
-### Data cleaning and processing
+### Data cleaning and preprocessing
+
+For the affected tables, the following issues were identified and treated:
+-	customer_orders
+  
+Presence of blank cells in the exclusions and extras column and several occurences of ‘null’. I updated the column values present in the extras columns mean that the value in a column is unknown or missing. 
+
+
+-	runner_orders
+  
+1.	The pickup time column contains ‘null’ string entries instead of NULL and inappropriate data type
+2.	The distance column contains ‘null’ string entries, and non-uniform entries such as ‘km’ and ‘ km’ or none and inappropriate data type
+3.	The duration column is inconsistent. Some values have ‘mins’, ‘minutes’ , ‘minute’,  ‘null ‘or nothing and inappropriate data type
+4.	The cancellation column contains ‘null’ entries
+
+
 
