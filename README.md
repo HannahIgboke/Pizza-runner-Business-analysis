@@ -1,5 +1,8 @@
 # Pizza:pizza:-runner-Business-analysis
 
+
+![pizza_runner](Images/pizza_runner.png)
+
 ## Table of contents
 
 - Introduction
