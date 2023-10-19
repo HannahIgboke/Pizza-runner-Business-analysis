@@ -45,16 +45,30 @@ In order for pizza runner to better direct its runners and optimize operations, 
 
 ### Data collection and database creation
 Owing to the fact that Danny had a few years of experience as a data scientist he knew that data collection was going to be critical for his business’ growth. He has provided a subset the Pizza runner data for the purpose of this analysis. 
-I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) for Pizza runner and to carry out intensive analysis. Below is the Entity Relationship Digram (ERD) showing the relationships between the tables in the database called pizza_runner.
+I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) for Pizza runner and to carry out intensive analysis. Below is the Entity Relationship Diagram (ERD) showing the relationships between the tables in the database called pizza_runner.
 
-![ERD](Images/ERD.png)
+![ERD](Images/ERD_pizza_runner.png)
 
 ### Exploratory data analysis
 
-I carried out an EDA to investigate the data, identify loopholes and understand the relationship between tables. On inspection, I observed some inconsistencies in data types, formatting and the preence of null values which needed to be accounted for. After my EDA I proceeded to cleaning my data.
+Exploratory data analysis is an indispensable step in the data analysis pipeline. After I created the database I carried out an EDA to investigate the data, identify loopholes and further understand the relationship between tables. On inspection, I observed some data quality issues including: inconsistencies in data types, formatting and the preence of null values which needed to be accounted for.
+
+customer_orders                                 |runner_orders                      
+------------------------------------------------|---------------------------
+![customer_orders](Images/customer_orders.PNG)  |![runner_orders](Images/runner_orders.PNG)   
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+runners                           |pizza_names                            |pizza_recipes                              |pizza_toppings  
+----------------------------------|---------------------------------------|-------------------------------------------|-----------------------
+![runners](Images/runners.PNG)    |![pizza_names](Images/pizza_names.PNG) |![pizza_recipes](Images/pizza_recipes.PNG) |![pizza_toppings](Images/pizza_toppings.PNG)   
+
+  
 
 ### Data cleaning and preprocessing
 
+The data preprocessing stage rids the day of every data quality issue observed in the EDA stage.
 For the affected tables, the following issues were identified and treated:
 -	customer_orders
   
