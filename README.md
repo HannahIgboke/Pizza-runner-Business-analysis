@@ -11,7 +11,7 @@
 - Data wrangling
   - Data collection and database creation
   - Exploratory data analysis
-  - Data cleaning and processing
+  - Data cleaning and preprocessing
 - Data analysis
   - Pizza metrics: results, data visualization and recommendations
   - Runner and customer experience: results, data visualization and recommendations
@@ -23,13 +23,16 @@
 ## Introduction
 
 Danny was browsing Instagram when he saw an ad for 80s retro styling and pizza. He loved the idea, but he knew he needed to do more than just sell pizza to get seed funding for his new business. So, he decided to Uberize it and create Pizza Runner, a pizza delivery service.
-Danny started by recruiting runners to deliver pizza from his house, which served as Pizza Runner Headquarters. He also maxed out his credit card to pay freelance developers to create a mobile app for customers to place orders.
+Danny started by recruiting runners to deliver pizza from his house, which served as Pizza Runner Headquarters. He also maxed out his credit card to pay freelance developers to create a mobile app for customers to place orders. Pizza runner has come a long way and now needs to put its data collected into good use to better direct its runners and optimize operations.
 
-
-P.S:This is challenge 2 — Pizza runner of the 8 Weeks SQL Challenge by Danny Ma.
+P.S:This is challenge 2 — [Pizza runner](https://8weeksqlchallenge.com/case-study-2/) of the [8 Weeks SQL Challenge](https://8weeksqlchallenge.com/getting-started/) by Danny Ma.
 
 ## Problem statement
-
+In order for pizza runner to better direct its runners and optimize operations, it requires insights and recommendations on the following focus areas:
+- Pizza Metrics
+- Runner and Customer Experience
+- Ingredient Optimisation
+- Pricing and Ratings
 
 ## Skills demonstrated
 
@@ -41,7 +44,10 @@ P.S:This is challenge 2 — Pizza runner of the 8 Weeks SQL Challenge by Danny M
 ## Data wrangling
 
 ### Data collection and database creation
-Danny has a few years of experience as a data scientist and is therefore aware that data collection was going to be critical for his business’ growth. He has provided a subset of his data for the purpose of this analysis. I used MySQL Workbench to create a database for Pizza runner and for the entire analysis. Below is the Entity Relationship Digram (ERD) for the tables provided
+Owing to the fact that Danny had a few years of experience as a data scientist he knew that data collection was going to be critical for his business’ growth. He has provided a subset the Pizza runner data for the purpose of this analysis. 
+I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) for Pizza runner and to carry out intensive analysis. Below is the Entity Relationship Digram (ERD) showing the relationships between the tables in the database called pizza_runner.
+
+![ERD](Images/ERD.png)
 
 ### Exploratory data analysis
 
