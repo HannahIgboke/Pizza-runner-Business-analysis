@@ -11,12 +11,12 @@
 - Data wrangling
   - Data collection and database creation
   - Exploratory data analysis
-  - Data cleaning and preprocessing
+  - Data cleaning
 - Data analysis
-  - Pizza metrics: results, data visualization and recommendations
-  - Runner and customer experience: results, data visualization and recommendations
-  - Ingredient optimization: results, data visualization and recommendations
-  - Pricing and ratings: results, data visualization and recommendations
+  - Pizza metrics
+  - Runner and customer experience
+  - Ingredient optimization
+  - Pricing and ratings
   - Other required datasets
 - Conclusion and Limitations
 
@@ -43,6 +43,8 @@ In order for pizza runner to better direct its runners and optimize operations, 
 
 ## Data wrangling
 
+There are three processes in Data Wrangling: collection, exploratory data analysis, and cleaning. These steps are implored to make our data fit for analysis.
+
 ### Data collection and database creation
 Owing to the fact that Danny had a few years of experience as a data scientist he knew that data collection was going to be critical for his business’ growth. He has provided a subset the Pizza runner data for the purpose of this analysis. 
 I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) for Pizza runner and to carry out intensive analysis. Below is the Entity Relationship Diagram (ERD) showing the relationships between the tables in the database called pizza_runner.
@@ -51,7 +53,9 @@ I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) f
 
 ### Exploratory data analysis
 
-Exploratory data analysis is an indispensable step in the data analysis pipeline. After I created the database I carried out an EDA to investigate the data, identify loopholes and further understand the relationship between tables. On inspection, I observed some data quality issues including: inconsistencies in data types, formatting and the preence of null values which needed to be accounted for.
+It is best practice to perform Exploratory data analysis before cleaning to investigate the data, identify loopholes and further understand the relationship between tables.
+
+On inspection, I observed some data quality issues in the customer_orders table, runer_orders table nincluding: inconsistencies in data types, and formatting.
 
 customer_orders                                 |runner_orders                      
 ------------------------------------------------|---------------------------
@@ -66,13 +70,13 @@ runners                           |pizza_names                            |pizza
 
   
 
-### Data cleaning and preprocessing
+### Data cleaning
 
-The data preprocessing stage rids the day of every data quality issue observed in the EDA stage.
+The data preprocessing stage is specially reserved for cleaning the data and addressing every data quality issue observed in the EDA stage.
 For the affected tables, the following issues were identified and treated:
 -	customer_orders
-  
-Presence of blank cells in the exclusions and extras column and several occurences of ‘null’. I updated the column values present in the extras columns mean that the value in a column is unknown or missing. 
+
+Presence of blank cells in the exclusions and extras column and several occurences of ‘null’. I updated the column values from 'null' to NULL which means that in the extras columns mean that the value in a column is unknown or missing. 
 
 
 -	runner_orders
