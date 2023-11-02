@@ -92,16 +92,28 @@ Data quality issues observed include:
 - The values of the duration column are  inconsistent. Some values have 'mins', 'minutes' , 'minute', 'null 'or nothing.
 - The cancellation column contains 'null' entries
 
+The code for this data cleaning can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/runners_orders_table_cleaning.sql)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**runners**
+The runners table shows the registration_date for each new runner. No data quality issues were discovered hence it is fit for analysis.
+
+![runners](Images/runners.PNG)    
+
+----------------------------------  
+
+
+**pizza_names**
 
 
 
+![pizza_names](Images/pizza_names.PNG) 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+![pizza_recipes](Images/pizza_recipes.PNG)
 
 
-runners                           |pizza_names                            |pizza_recipes                              |pizza_toppings  
-----------------------------------|---------------------------------------|-------------------------------------------|-----------------------
-![runners](Images/runners.PNG)    |![pizza_names](Images/pizza_names.PNG) |![pizza_recipes](Images/pizza_recipes.PNG) |![pizza_toppings](Images/pizza_toppings.PNG)   
+![pizza_toppings](Images/pizza_toppings.PNG)  
 
-  
 
