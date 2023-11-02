@@ -64,6 +64,7 @@ This stage is specially reserved for cleaning the data and addressing every data
 For the affected tables, the following issues were identified and treated:
 
 **customer_orders**
+
 Customer pizza orders are captured in the customer_orders table with one row for each individual pizza that is part of the order. Exclusions and extras refers to the toppings the customer excluded or added to their order. The results from the EDA is shown below
 
 
@@ -81,6 +82,7 @@ The cleaned table looks like this:
 ------------------------------------------------
 
 **runner_orders**
+
 Each order is assigned to a runner (given by the runner_id) - however not all orders are fully completed and can be cancelled by the restaurant or the customer. The pickup_time shows the timestamp which the runner picks up the orders, The distance and duration fields are related to how far and long the runner had to travel to deliver the order to the respective customer.
 
 |![runner_orders](Images/runner_orders.PNG)   
@@ -101,19 +103,61 @@ The runners table shows the registration_date for each new runner. No data quali
 
 ![runners](Images/runners.PNG)    
 
-----------------------------------  
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **pizza_names**
 
-
+At the moment, Pizza Runner only has 2 pizzas available: Meat Lovers and Vegetarian! No data quality issues discovered.
 
 ![pizza_names](Images/pizza_names.PNG) 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**pizza_recipes**
+
+Each pizza_id has a standard set of toppings which are used as part of the pizza recipe. No data quality issues discovered!
 
 ![pizza_recipes](Images/pizza_recipes.PNG)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**pizza_toppings**
+
+Contains all of the topping_name values with their corresponding topping_id value. No data quality issues were discovered.
 
 ![pizza_toppings](Images/pizza_toppings.PNG)  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Data Analysis
+
+### Pizza metrics
+
+
+
+
+### Runner and customer experience
+
+
+
+
+
+
+### Ingredient optimization
+
+
+
+
+
+
+### Pricing and ratings
+
+
+
+
+
+### Other required datasets
 
 
