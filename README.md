@@ -57,9 +57,44 @@ It is best practice to perform Exploratory data analysis before cleaning to inve
 
 On inspection, I observed some data quality issues in the customer_orders table, runer_orders table nincluding: inconsistencies in data types, and formatting.
 
-customer_orders                                 |runner_orders                      
-------------------------------------------------|---------------------------
-![customer_orders](Images/customer_orders.PNG)  |![runner_orders](Images/runner_orders.PNG)   
+
+### Data cleaning
+
+This stage is specially reserved for cleaning the data and addressing every data quality issue observed in the EDA stage.
+For the affected tables, the following issues were identified and treated:
+
+**customer_orders**
+Customer pizza orders are captured in the customer_orders table with one row for each individual pizza that is part of the order. Exclusions and extras refers to the toppings the customer excluded or added to their order. The results from the EDA is shown below
+
+
+![customer_orders](Images/customer_orders.PNG)  
+
+The data quality issues observed included:
+- The presence of 'null' in the exclusions and extras columns instead of NULL to indicate unavailable entries
+- The customer_orders table, the exclusions & extras column contained several comma separated values.
+
+The code for this data cleaning can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/customer_orders_table_cleaning.sql).
+
+The cleaned table looks like this:
+![cleaned customer orders](Images/pizza_runner.png)
+
+------------------------------------------------
+
+**runner_orders**
+Each order is assigned to a runner (given by the runner_id) - however not all orders are fully completed and can be cancelled by the restaurant or the customer. The pickup_time shows the timestamp which the runner picks up the orders, The distance and duration fields are related to how far and long the runner had to travel to deliver the order to the respective customer.
+
+|![runner_orders](Images/runner_orders.PNG)   
+
+Data quality issues observed include:
+- The pickup time, distance, and duration columns have inappropriate data types.
+- The pickup time column contains 'null' string entries instead of NULL.
+- The distance column contains 'null' string entries, and non-uniform entries such as 'km' and ' km' or none.
+- The values of the duration column are  inconsistent. Some values have 'mins', 'minutes' , 'minute', 'null 'or nothing.
+- The cancellation column contains 'null' entries
+
+
+
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,22 +104,4 @@ runners                           |pizza_names                            |pizza
 ![runners](Images/runners.PNG)    |![pizza_names](Images/pizza_names.PNG) |![pizza_recipes](Images/pizza_recipes.PNG) |![pizza_toppings](Images/pizza_toppings.PNG)   
 
   
-
-### Data cleaning
-
-The data preprocessing stage is specially reserved for cleaning the data and addressing every data quality issue observed in the EDA stage.
-For the affected tables, the following issues were identified and treated:
--	customer_orders
-
-Presence of blank cells in the exclusions and extras column and several occurences of ‘null’. I updated the column values from 'null' to NULL which means that in the extras columns mean that the value in a column is unknown or missing. 
-
-
--	runner_orders
-  
-1.	The pickup time column contains ‘null’ string entries instead of NULL and inappropriate data type
-2.	The distance column contains ‘null’ string entries, and non-uniform entries such as ‘km’ and ‘ km’ or none and inappropriate data type
-3.	The duration column is inconsistent. Some values have ‘mins’, ‘minutes’ , ‘minute’,  ‘null ‘or nothing and inappropriate data type
-4.	The cancellation column contains ‘null’ entries
-
-
 
