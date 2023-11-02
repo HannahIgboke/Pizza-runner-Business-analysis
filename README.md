@@ -49,7 +49,7 @@ There are three processes in Data Wrangling: collection, exploratory data analys
 Owing to the fact that Danny had a few years of experience as a data scientist he knew that data collection was going to be critical for his business’ growth. He has provided a subset the Pizza runner data for the purpose of this analysis. 
 I used MySQL Workbench to create a [database](SQL_files/Database_creation.sql) for Pizza runner and to carry out intensive analysis. Below is the Entity Relationship Diagram (ERD) showing the relationships between the tables in the database called pizza_runner.
 
-![ERD](Images/ERD_pizza_runner.png)
+![ERD](Images/ERD.png)
 
 ### Exploratory data analysis
 
