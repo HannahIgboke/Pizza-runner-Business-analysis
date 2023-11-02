@@ -5,7 +5,7 @@
 
 ## Table of contents
 
-- Introduction
+- [Introduction](https://github.com/HannahIgboke/Pizza-runner-Business-analysis#introduction)
 - Problem statement
 - Skills demonstrated
 - Data wrangling
