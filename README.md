@@ -37,6 +37,9 @@ In order for pizza runner to better direct its runners and optimize operations, 
 ## Skills demonstrated
 
 - Data wrangling in MySQL
+- Aggregate functions
+- SQL table joins
+- Common table expressions
 - Power BI
 - Project documentation
 
