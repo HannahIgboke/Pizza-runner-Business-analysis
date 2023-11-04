@@ -6,18 +6,17 @@
 ## Table of contents
 
 - [Introduction](https://github.com/HannahIgboke/Pizza-runner-Business-analysis#introduction)
-- Problem statement
-- Skills demonstrated
-- Data wrangling
-  - Data collection and database creation
-  - Exploratory data analysis
-  - Data cleaning
-- Data analysis
-  - Pizza metrics
-  - Runner and customer experience
-  - Ingredient optimization
-  - Pricing and ratings
-  - Other required datasets
+- [Problem statement](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/tree/main#problem-statement)
+- [Skills demonstrated](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#skills-demonstrated)
+- [Data wrangling](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#data-wrangling)
+  - [Data collection and database creation](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#data-collection-and-database-creation)
+  - [Exploratory data analysis](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#exploratory-data-analysis)
+  - [Data cleaning](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#data-cleaning)
+- [Data analysis]()
+  - [Pizza metrics]()
+  - [Runner and customer experience]
+  - [Ingredient optimization]
+  - [Pricing and ratings]
 - Conclusion and Limitations
 
 ## Introduction
