@@ -429,6 +429,8 @@ An ‘extra’ in Pizza Runner’s orders signifies a topping or ingredient cust
 
 *Solution:*
 
+To answer this question, I created a TEMPORARY table called customer_orders_cleaned. You can find the link for the code in my GitHub Repository. I created a temporary table so I could simplify complex queries rather than constructing intricate queries with numerous subqueries or joins.
+
 ![solution_2](Images/Ingredient_optimization/IO_solution_2.PNG)
 
 
