@@ -27,7 +27,7 @@ Danny started by recruiting runners to deliver pizza from his house, which serve
 P.S:This is challenge 2 — [Pizza runner](https://8weeksqlchallenge.com/case-study-2/) of the [8 Weeks SQL Challenge](https://8weeksqlchallenge.com/getting-started/) by Danny Ma.
 
 ## Problem statement
-In order for pizza runner to better direct its runners and optimize operations, it requires insights and recommendations on the following focus areas:
+In order for Pizza Runner to **better direct its runners and optimize operations**, it requires insights and recommendations on the following focus areas:
 - Pizza Metrics
 - Runner and Customer Experience
 - Ingredient Optimisation
@@ -135,7 +135,104 @@ Contains all of the topping_name values with their corresponding topping_id valu
 
 ## Data Analysis
 
+The data analysis stage is a critical component in enabling Pizza Runner's quest for operational excellence. An analysis of various sectors of Pizza Runner would provide vital insights to enhance the decision-making process, better direct their runners, boost sales, and improve customer satisfaction.
+
+
 ### Pizza metrics
+
+All codes for this analysis can be found here. Pizza runner has posed the following business questions:
+
+1. How many pizzas were ordered?
+Pizza runner is interested to know just how many orders they have received. This is solved by COUNTing the number of instances where customers made an order as given by the customer_orders table.
+
+*Solution:*
+
+Based on the data provided, Pizza runner has received a total of 14 pizza orders from its customers.
+
+![solution_1](Images/Pizza_metrics/PM_solution_1.PNG)
+
+
+2. How many unique customer orders were made?
+
+In Pizza runner, every order made is given an order_id which means that in one order more than one pizza can be ordered. Therefore Pizza runner wants to find out how many distinct orders were made. 
+
+*Solution:*
+From the customer_orders table, it was discovered that 10 unique/distinct orders have been made
+
+![solution_2](Images/Pizza_metrics/PM_solution_2.PNG)
+
+
+3. A successful order is one where neither the restaurant nor the customer cancel the order. Pizza Runner likes to ensure that all orders are delivered successfully, so it is curious to know how many orders have been successfully delivered by each runner.
+P.S. Due to data privacy issues, each runner has been given an anonymized runner_id.
+
+*Solution:*
+
+The answer to this question was reached by COUNTing the number of orders handled by each runner. The results were grouped by runner_id.
+
+![solution 3](Images/Pizza_metrics/PM_solution_3.PNG)
+
+From the runner_orders table, a total of 10 orders were assigned to riders. Two of the orders were cancelled, one by the restaurant and the other by the customer. Runner 1 was seen to make the most deliveries, and runner 3 the least.
+
+4. How many of each type of pizza was delivered?
+For now, Pizza Runner makes and delivers two types of pizzas: Meatlovers (pizza_id 1) pizza and Vegetarian (pizza_id 2) pizza.
+
+*Solution:*
+
+To answer this I JOINed two tables: the customer_orders and the runner_orders tables, filtered for instances where the order was not cancelled (i.e cancellation IS NULL) and then grouped the results by the pizza_id.
+
+![solution_4](Images/Pizza_metrics/PM_solution_4.PNG)
+
+Meatlovers Pizza received nine orders in all, and Vegetarian 3.
+
+
+5. How many Vegetarians and Meatlovers were ordered by each customer?
+
+Now that Pizza Runner knows how many of each type of pizza was delivered, it further wants to know how many of each type of pizza was ordered by each customer, regardless of whether the order was cancelled. Like in the case of the runners, customer identities are protected through an anonymized customer_id.
+
+*Solution:*
+
+The pizza_id was used to connect the customer_orders and pizza_names tables using an INNER JOIN. The results were then GROUPed first by the customer_id, followed by the name of the pizza_name.
+
+
+![solution_5](Images/Pizza_metrics/PM_solution_5.PNG)
+
+In summary, we see that all the customers ordered more Meatlovers pizza except customer 105. Customer 105 appeared once in the customer_orders table because that was their first time placing their order. So 105’s first order was Vegetarian pizza.
+
+
+6. What was the maximum number of pizzas delivered in a single order?
+
+As earlier mentioned, a pizza order is seen as ‘delivered’ when neither the customer nor the restaurant cancel it. Pizza runner has asked to know what the maximum number of pizzas ordered were delivered in a single order. A'single order’ is indicated by the pickup time when the runners picked up the order from the restaurant.
+
+
+*Solution:*
+
+In order to answer this I used an INNER JOIN to retrieve data from both tables and eliminate unrelated data thereby returning only rows where there was a match in both tables being joined.
+
+![solution_6](Images/Pizza_metrics/PM_solution_6.PNG)
+
+The results show that the maximum number of pizzas delivered in a single order is 3.
+
+
+7. 
+
+
+![solution_7](Images/Pizza_metrics/PM_solution_7.PNG)
+
+
+
+![solution_8](Images/Pizza_metrics/PM_solution_8.PNG)
+
+
+
+
+![solution_9](Images/Pizza_metrics/PM_solution_9.PNG)
+
+
+
+
+![solution_10](Images/Pizza_metrics/PM_solution_10.PNG)
+
+
 
 
 
@@ -143,7 +240,7 @@ Contains all of the topping_name values with their corresponding topping_id valu
 ### Runner and customer experience
 
 
-
+[solution_2]()
 
 
 
