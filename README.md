@@ -300,8 +300,51 @@ Following the insights I was able to garner from the data provided, I would reco
 
 ### Runner and customer experience
 
+Pizza Runner wants to know about its runner and customer experience so far, so it can identify areas it isn't doing well and areas it can improve upon. 
+All codes for this analysis can be found here.
 
-![solution_2]()
+
+**How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)**
+
+
+
+![solution_1](Images/Runner_and_Cust_experience/RCE_solution_1.PNG)
+
+
+
+
+
+![solution_2](Images/Runner_and_Cust_experience/RCE_solution_2.PNG)
+
+
+
+
+
+![solution_3](Images/Runner_and_Cust_experience/RCE_solution_3.PNG)
+
+
+
+
+
+
+
+![solution_4](Images/Runner_and_Cust_experience/RCE_solution_4.PNG)
+
+
+
+
+
+![solution_5](Images/Runner_and_Cust_experience/RCE_solution_5.PNG)
+
+
+
+
+![solution_6](Images/Runner_and_Cust_experience/RCE_solution_6.PNG)
+
+
+
+
+![solution_7](Images/Runner_and_Cust_experience/RCE_solution_7.PNG)
 
 
 
