@@ -352,32 +352,99 @@ When Pizza Runner receives one order, it takes them about 12 minutes on average,
 - Employee Training: Train the kitchen staff to operate and maintain the automation equipment effectively, thereby ensuring a seamless integration into Pizza Runner’s daily operations.
 
 
+**4. What was the average distance traveled for each customer?**
+
+On average, how far (distance) is a customer’s place from Pizza Runner’s HQ?
+
+
+*Solution:*
+
+Customer 105's location is the farthest from the entire customer base. On average, runners have to travel 25 kilometers to deliver their order. Customer 104’s location is the closest to the HQ, with an average distance of 10km.
 
 ![solution_4](Images/Runner_and_Cust_experience/RCE_solution_4.PNG)
 
 
+**Recommendations**
 
+- Geographic Customer Targeting: Identify and target potential customers in the vicinity of the headquarters through localized marketing efforts to increase the number of orders from nearby areas.
+- Promotions for Nearby Customers: Offer special promotions or discounts to incentivize orders from customers near the HQ, making it more attractive for them to choose Pizza Runner.
+- Self-Pickup Feature: Develop and implement a self-pickup feature on the mobile app and website, allowing customers to choose to collect their orders in person.
+- User-Friendly Interface: Ensure the self-pickup feature is user-friendly and intuitive for customers to select as their preference during the ordering process.
+- Communication and Marketing: Communicate the benefits of self-pickup, such as reduced delivery fees and quicker access to their orders, to customers through marketing campaigns.
 
+**5. What was the difference between the longest and shortest delivery times for all orders?**
+
+In general, Pizza runner would like to know the longest and shortest delivery times for their customer base, as well as the differences between them.
+
+*Solution:*
 
 ![solution_5](Images/Runner_and_Cust_experience/RCE_solution_5.PNG)
 
+The longest time spent on a delivery was 40 minutes, and the shortest was 10 minutes.
 
+**6. What was the average speed for each runner for each delivery ?**
 
+*Solution:*
 
 ![solution_6](Images/Runner_and_Cust_experience/RCE_solution_6.PNG)
 
 
+**7. What is the successful delivery percentage for each runner?**
 
+The successful delivery percentage for each runner refers to how many percent of deliveries assigned to each runner were successful, i.e., the orders were not cancelled by either the restaurant or the customer.
+
+*Solution:*
+
+The successful delivery percentage for each runner is based on the number of orders that were assigned to each of them.
 
 ![solution_7](Images/Runner_and_Cust_experience/RCE_solution_7.PNG)
 
 
-
-### Ingredient optimization
-
+Runner 1 achieved a perfect delivery rate, as they successfully completed all four assigned deliveries with no cancellations. Runner 2, on the other hand, was assigned four deliveries, with one cancellation by the customer, resulting in a 75% successful delivery rate. Runner 3 had the fewest assignments, managing two deliveries, but one of them was canceled by the restaurant, leading to an overall delivery success rate of 50%.
 
 
+**Other recommendations**
 
+- A weekly feedback and review form should be rolled out and enabled on the mobile app or website or sent directly to customers' emails in order to gather more specific data to generate insights on customer satisfaction.
+- Data should be collected on reasons for order cancellations to enable the pizza runner to identify present and potential loopholes.
+
+### [Ingredient optimization](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#ingredient-optimization)
+
+Here, Pizza Runner is more concerned with basic knowledge of the common extras and exclusions in their pizza orders, as well as having handy summary tables they can quickly look at to understand the nature of customers' orders.
+
+**1. What are the standard ingredients for each pizza?**
+
+Pizza runner wants to have an overview of the ingredients used to prepare each pizza.
+
+*Solution:*
+
+![solution_1](Images/Ingredient_optimization/IO_solution_1.PNG)
+
+The results show all the ingredients used to prepare the Meatlovers and Vegetarian pizza.
+
+
+**2. What was the most commonly added extra?**
+
+An ‘extra’ in Pizza Runner’s orders signifies a topping or ingredient customers can request to be added to their order.
+
+*Solution:*
+
+![solution_2](Images/Ingredient_optimization/IO_solution_2.PNG)
+
+
+
+
+
+![solution_3](Images/Ingredient_optimization/IO_solution_3.PNG)
+
+
+
+
+![solution_4](Images/Ingredient_optimization/IO_solution_4.PNG)
+
+
+
+![solution_5](Images/Ingredient_optimization/IO_solution_5.PNG)
 
 
 ### Pricing and ratings
