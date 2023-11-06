@@ -142,7 +142,7 @@ The data analysis stage is a critical component in enabling Pizza Runner's quest
 
 All codes for this analysis can be found here. Pizza runner has posed the following business questions:
 
-1. How many pizzas were ordered?
+**1. How many pizzas were ordered?**
 Pizza runner is interested to know just how many orders they have received. This is solved by COUNTing the number of instances where customers made an order as given by the customer_orders table.
 
 *Solution:*
@@ -152,7 +152,7 @@ Based on the data provided, Pizza runner has received a total of 14 pizza orders
 ![solution_1](Images/Pizza_metrics/PM_solution_1.PNG)
 
 
-2. How many unique customer orders were made?
+**2. How many unique customer orders were made?**
 
 In Pizza runner, every order made is given an order_id which means that in one order more than one pizza can be ordered. Therefore Pizza runner wants to find out how many distinct orders were made. 
 
@@ -162,7 +162,9 @@ From the customer_orders table, it was discovered that 10 unique/distinct orders
 ![solution_2](Images/Pizza_metrics/PM_solution_2.PNG)
 
 
-3. A successful order is one where neither the restaurant nor the customer cancel the order. Pizza Runner likes to ensure that all orders are delivered successfully, so it is curious to know how many orders have been successfully delivered by each runner.
+**3. How many successful orders were delivered by each runner?**
+
+A successful order is one where neither the restaurant nor the customer cancel the order. Pizza Runner likes to ensure that all orders are delivered successfully, so it is curious to know how many orders have been successfully delivered by each runner.
 P.S. Due to data privacy issues, each runner has been given an anonymized runner_id.
 
 *Solution:*
@@ -173,7 +175,8 @@ The answer to this question was reached by COUNTing the number of orders handled
 
 From the runner_orders table, a total of 10 orders were assigned to riders. Two of the orders were cancelled, one by the restaurant and the other by the customer. Runner 1 was seen to make the most deliveries, and runner 3 the least.
 
-4. How many of each type of pizza was delivered?
+**4. How many of each type of pizza was delivered?**
+
 For now, Pizza Runner makes and delivers two types of pizzas: Meatlovers (pizza_id 1) pizza and Vegetarian (pizza_id 2) pizza.
 
 *Solution:*
@@ -185,7 +188,7 @@ To answer this I JOINed two tables: the customer_orders and the runner_orders ta
 Meatlovers Pizza received nine orders in all, and Vegetarian 3.
 
 
-5. How many Vegetarians and Meatlovers were ordered by each customer?
+**5. How many Vegetarians and Meatlovers were ordered by each customer?**
 
 Now that Pizza Runner knows how many of each type of pizza was delivered, it further wants to know how many of each type of pizza was ordered by each customer, regardless of whether the order was cancelled. Like in the case of the runners, customer identities are protected through an anonymized customer_id.
 
@@ -199,7 +202,7 @@ The pizza_id was used to connect the customer_orders and pizza_names tables usin
 In summary, we see that all the customers ordered more Meatlovers pizza except customer 105. Customer 105 appeared once in the customer_orders table because that was their first time placing their order. So 105’s first order was Vegetarian pizza.
 
 
-6. What was the maximum number of pizzas delivered in a single order?
+**6. What was the maximum number of pizzas delivered in a single order?**
 
 As earlier mentioned, a pizza order is seen as ‘delivered’ when neither the customer nor the restaurant cancel it. Pizza runner has asked to know what the maximum number of pizzas ordered were delivered in a single order. A'single order’ is indicated by the pickup time when the runners picked up the order from the restaurant.
 
@@ -213,34 +216,92 @@ In order to answer this I used an INNER JOIN to retrieve data from both tables a
 The results show that the maximum number of pizzas delivered in a single order is 3.
 
 
-7. 
+**7. For each customer, how many delivered pizzas had at least one change and how many had no changes?**
 
+Pizza Runner affords its customers the opportunity to customize their orders. They can either exclude or add specific toppings as they deem fit. Pizza runner would like to know how many of the successful orders had at least one change and how many had no changes. A change occurs when either an extra or an exclusion is made.
+
+
+*Solution:*
+
+I used two CASE statements to solve this. The first CASE statement COUNTs the number of times where neither an exclusion or extra was made - no change. The second CASE statement searches for and COUNTs instances where either an exclusion or an extra was made. Again the results were filtered to return cases where the orders were not cancelled.
 
 ![solution_7](Images/Pizza_metrics/PM_solution_7.PNG)
 
+On two occasions, Customer 101's orders had no changes, while three of Customer 102’s orders had no changes. All three of 103’s orders had at least one change in them. Customer 104, who made 3 orders, made at least one change in one of them and no change in one of them. Customer 105's first order also had at least one change.
 
+**8. How many pizzas were delivered that had both exclusions and extras?**
+
+Based on customer preferences, they could add or remove a topping(s) from an order. With this in mind, Pizza Runner wants to find out if there were cases like this in any of the orders delivered.
+
+*Solution:*
+
+The method for solution follows the same pattern as the last question except that here, the CASE statement COUNTs instances where exclusions and extras were made that is, where exclusion and extras are NOT NULL.
 
 ![solution_8](Images/Pizza_metrics/PM_solution_8.PNG)
 
+Results show that there was only one case where an exclusion and extras were made. This was made by customer 104.
 
 
+**9. What was the total volume of pizzas ordered for each hour of the day?**
+
+Next, Pizza runner wants to understand what the workload is like for each hour of the day. They would like to know what hours of the day are the busiest, where busy = more orders made during that hour.
+
+
+*Solution:*
+
+From the customer_orders table, the HOUR of the day was extracted from the order_time column while the orders made within that hour period  was COUNTed. The results were GROUPed by the hour of the day and ORDERed from the highest to lowest orders made.
 
 ![solution_9](Images/Pizza_metrics/PM_solution_9.PNG)
 
+For more context, the 11th hour, for example, indicates the pizzas ordered between 11 a.m. to 12 p.m.The 13th (1pm), 18th (6pm), 21st (9pm), and 23rd (111pm) hour periods saw high volumes of pizza orders. From this, we see that customers are seen ordering pizza during lunch breaks, in the evenings as they head home, and as late-night snacks.
 
 
+**10. What was the volume of orders for each day of the week?**
+
+What day of the week is the busiest at Pizza Runner? They would like to know how the volume of pizzas ordered varies each day of the week.
+
+*Solution:*
+
+The order_time column is in datetime format. In order to obtain the required values, I used the DAYOFWEEK and DAYNAME functions to extract the day of the week and day name from the order_time column in the customer_orders table.
 
 ![solution_10](Images/Pizza_metrics/PM_solution_10.PNG)
 
+For this analysis, Sunday is taken as day 1, Monday, day 2, etc. The midweek (Wednesday) and the end of the week (Saturday) saw the highest number of pizzas ordered. Friday had the fewest pizzas ordered.
 
 
+**Recommendations**
+
+Following the insights I was able to garner from the data provided, I would recommend that Pizza Runner implement the following to optimize operations and drive sales:
+
+*Enhanced customer and business data collection:*
+
+- Collect and store additional customer data, including gender, location, marital status, age, and demographics.
+- Further utilize this data for predictive analysis and to build recommendation systems aimed at creating personalized experiences and discounts to meet individual customer needs effectively.
+- More data on Pizza Runner’s operations should be collected in order to monitor sales data, revenue, expenditures, and market trends to make informed decisions, reducing the risk of costly mistakes or misaligned strategies.
+
+*Peak Hour Marketing and Customized Menus:*
+
+- Implement targeted marketing campaigns during peak hours (11th, 18th, 21st, and 23rd hours) to promote pizza orders.
+- Offer special discounts, promotions, or bundle deals during these times to attract more customers.
+- Create customized menus tailored to different time periods, like quick lunch options during the 11th hour and family-sized pizzas during the evening and late-night hours.
+
+*Efficient Operations:*
+
+- Adjust staffing schedules to accommodate peak ordering times.
+- Ensure there are enough delivery runners and kitchen staff to maintain quick delivery times during high-demand periods.
+- Implement a robust order tracking system with notifications to enhance customer satisfaction, especially during busy hours.
+
+*Customer Loyalty Program:*
+
+- Introduce a customer loyalty program that rewards frequent customers.
+- Offer points or discounts for repeat orders during highlighted hours to encourage customer retention.
 
 
 
 ### Runner and customer experience
 
 
-[solution_2]()
+![solution_2]()
 
 
 
@@ -256,7 +317,6 @@ The results show that the maximum number of pizzas delivered in a single order i
 
 
 
-
-### Other required datasets
+### Conclusion/Limitations
 
 
