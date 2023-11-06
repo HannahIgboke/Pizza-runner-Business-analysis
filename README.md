@@ -13,10 +13,10 @@
   - [Exploratory data analysis](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#exploratory-data-analysis)
   - [Data cleaning](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#data-cleaning)
 - [Data analysis]()
-  - [Pizza metrics]()
-  - [Runner and customer experience]
-  - [Ingredient optimization]
-  - [Pricing and ratings]
+  - [Pizza metrics](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#pizza-metrics)
+  - [Runner and customer experience](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#runner-and-customer-experience)
+  - [Ingredient optimization](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#ingredient-optimization)
+  - [Pricing and ratings](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#pricing-and-ratings)
 - Conclusion and Limitations
 
 ## Introduction
@@ -408,7 +408,7 @@ Runner 1 achieved a perfect delivery rate, as they successfully completed all fo
 - A weekly feedback and review form should be rolled out and enabled on the mobile app or website or sent directly to customers' emails in order to gather more specific data to generate insights on customer satisfaction.
 - Data should be collected on reasons for order cancellations to enable the pizza runner to identify present and potential loopholes.
 
-### [Ingredient optimization](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#ingredient-optimization)
+### Ingredient optimization
 
 Here, Pizza Runner is more concerned with basic knowledge of the common extras and exclusions in their pizza orders, as well as having handy summary tables they can quickly look at to understand the nature of customers' orders.
 
@@ -429,25 +429,55 @@ An ‘extra’ in Pizza Runner’s orders signifies a topping or ingredient cust
 
 *Solution:*
 
-To answer this question, I created a TEMPORARY table called customer_orders_cleaned. You can find the link for the code in my GitHub Repository. I created a temporary table so I could simplify complex queries rather than constructing intricate queries with numerous subqueries or joins.
+To answer this question, I created a TEMPORARY table called customer_orders_cleaned. You can find the link for the code in my GitHub Repository. I created a temporary table as seen below so I could simplify complex queries rather than constructing intricate queries with numerous subqueries or joins.
+
+[Temporary table](Images/customer_orders_cleaned2.PNG)
+
+
+Output:
 
 ![solution_2](Images/Ingredient_optimization/IO_solution_2.PNG)
 
+The most common extra is Bacon, and the least common chicken.
 
 
+**3. What was the most common exclusion?**
 
+Exclusions refer to toppings or ingredients requested to be excluded from their orders.
+
+*Solution:*
 
 ![solution_3](Images/Ingredient_optimization/IO_solution_3.PNG)
 
+The most common exclusion is Cheese. It was excluded 5 times from the orders.
 
 
+**4. Generate an order item for each record in the customers_orders table in the format of one of the following:**
+Meat Lovers
+Meat Lovers - Exclude Beef
+Meat Lovers - Extra Bacon
+Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
+
+Here, Pizza runner simply wants a table showing the order item for each record/order made to Pizza runner.
+
+*Solution:*
 
 ![solution_4](Images/Ingredient_optimization/IO_solution_4.PNG)
 
 
+The summary table above shows the order item for each record/order made to Pizza runner.
+
+**5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients. For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"**
+
+Pizza runner does not want to keep going back and forth between tables trying to match customer's orders to the pizza types and names hence they have requested this table.
+
+
+*Solution:*
 
 ![solution_5](Images/Ingredient_optimization/IO_solution_5.PNG)
 
+
+The table shows an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table.
 
 ### Pricing and ratings
 
