@@ -304,27 +304,52 @@ Pizza Runner wants to know about its runner and customer experience so far, so i
 All codes for this analysis can be found here.
 
 
-**How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)**
+**1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)**
 
+An individual becomes a runner at Pizza Runner when they sign up and have been onboarded.
 
+*Solution:*
+
+To answer this, I selected the week number for each registration date, then added 2 days to the registration date using the INTERVAL keyword before calculating the week number using the WEEK function.
+It is important to note the 'INTERVAL 2 DAY' part of the code. I added this to standardize the week boundaries, especially because the data doesn't align with a particular week's starting day. For example, 2021–01–01 was a Friday and hence not the start of the week (for the sake of this analysis, I picked Sunday to be the start of the week). By adding a 2-day interval, I effectively shifted the starting point of the week from Friday to Sunday.
 
 ![solution_1](Images/Runner_and_Cust_experience/RCE_solution_1.PNG)
 
+In the first week of January 2021, Pizza runner signed up two runners while in the second and third weeks, one runner each signed up.
 
 
+**2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?**
 
+Just how long, on average (i.e., the mean), did it take each runner to arrive at the HQ to pickup an order?
+
+*Solution:*
 
 ![solution_2](Images/Runner_and_Cust_experience/RCE_solution_2.PNG)
 
+On average runner two takes the most time.
 
+**Recommendations**
+- Implement a location tracking system for runners during their delivery/work hours, similar to the systems used by ride-sharing services like Uber or Bolt.
+- Develop a real-time tracking system that allows Pizza runner to monitor the location of each runner during their shifts.
+- Utilize the location data to optimize delivery assignments by assigning orders to runners who are in close proximity to the delivery location, reducing delivery times.
+- Implement route optimization algorithms that consider live runner locations to minimize delivery distances and increase overall delivery efficiency.
+- Enhanced Customer Experience: Real-time tracking of runner locations can be shared with customers, improving transparency and providing them with estimated delivery times.
 
+**3. Is there any relationship between the number of pizzas and how long the order takes to prepare?**
 
+Pizza Runner wants to know how long an order takes to be prepared based on the number of pizzas ordered at a time.
+
+*Solution:*
 
 ![solution_3](Images/Runner_and_Cust_experience/RCE_solution_3.PNG)
 
+When Pizza Runner receives one order, it takes them about 12 minutes on average, 18 minutes for two, and 29 minutes for three. Ordinarily, you would expect that preparing two pizzas would take twice as long as preparing one pizza. In this case, Pizza Runner is efficient enough to cut down on the time taken to prepare more than one pizza. But this efficiency can be improved upon.
 
+**Recommendations**
 
-
+- Automated Pizza Assembly Line: Pizza Runner should invest in an automated pizza assembly line that can prepare multiple pizzas simultaneously, reducing preparation time for multiple orders. This automation ensures consistent quality and speeds up the pizza-making process, resulting in quicker order fulfillment.
+- Kitchen Optimization: Reconfigure the kitchen layout to accommodate automated equipment while maintaining a smooth workflow and safety.
+- Employee Training: Train the kitchen staff to operate and maintain the automation equipment effectively, thereby ensuring a seamless integration into Pizza Runner’s daily operations.
 
 
 
