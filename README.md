@@ -127,6 +127,10 @@ At the moment, Pizza Runner only has 2 pizzas available: Meat Lovers and Veget
 
 Each pizza_id has a standard set of toppings which are used as part of the pizza recipe. No data quality issues discovered!
 
+
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_recipes.PNG" alt="pizza_recipes">
+</p>
 ![pizza_recipes](Images/pizza_recipes.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -238,7 +242,7 @@ On two occasions, Customer 101's orders had no changes, while three of Customer 
 
 **8. How many pizzas were delivered that had both exclusions and extras?**
 
-Based on customer preferences, they could add or remove a topping(s) from an order. With this in mind, Pizza Runner wants to find out if there were cases like this in any of the orders delivered.
+Based on customer preferences, they could add and remove a topping(s) from an order. With this in mind, Pizza Runner wants to find out if there were cases like this in any of the orders delivered.
 
 *Solution:*
 
@@ -303,12 +307,12 @@ Following the insights I was able to garner from the data provided, I would reco
 - Introduce a customer loyalty program that rewards frequent customers.
 - Offer points or discounts for repeat orders during highlighted hours to encourage customer retention.
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Runner and customer experience
 
 Pizza Runner wants to know about its runner and customer experience so far, so it can identify areas it isn't doing well and areas it can improve upon. 
-All codes for this analysis can be found here.
+All codes for this analysis can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/Runner_and_Customer_Experience.sql)
 
 
 **1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)**
@@ -337,7 +341,7 @@ On average runner two takes the most time.
 
 **Recommendations**
 - Implement a location tracking system for runners during their delivery/work hours, similar to the systems used by ride-sharing services like Uber or Bolt.
-- Develop a real-time tracking system that allows Pizza runner to monitor the location of each runner during their shifts.
+- Develop a real-time tracking system that allows Pizza Runner to monitor the location of each runner during their shifts.
 - Utilize the location data to optimize delivery assignments by assigning orders to runners who are in close proximity to the delivery location, reducing delivery times.
 - Implement route optimization algorithms that consider live runner locations to minimize delivery distances and increase overall delivery efficiency.
 - Enhanced Customer Experience: Real-time tracking of runner locations can be shared with customers, improving transparency and providing them with estimated delivery times.
@@ -387,7 +391,7 @@ In general, Pizza runner would like to know the longest and shortest delivery ti
 
 ![solution_5](Images/Runner_and_Cust_experience/RCE_solution_5.PNG)
 
-The longest time spent on a delivery was 40 minutes, and the shortest was 10 minutes.
+The longest time spent on a delivery was 40 minutes, and the shortest was 10 minutes which brings the difference to 30 minutes.
 
 **6. What was the average speed for each runner for each delivery ?**
 
