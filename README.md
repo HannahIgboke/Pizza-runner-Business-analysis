@@ -567,7 +567,7 @@ Pizza runner simply wants a table summarizing the order item for each record/ord
 *Solution:*
 
 <p align="center">
-    <img width="700" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_4.PNG" alt="IO_solution_4.PNG">
+    <img width="650" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_4.PNG" alt="IO_solution_4.PNG">
 </p>
 
 
@@ -581,7 +581,7 @@ Pizza runner does not want to keep going back and forth between tables trying to
 *Solution:*
 
 <p align="center">
-    <img width="700" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_5.PNG" alt="IO_solution_5.PNG">
+    <img width="650" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_5.PNG" alt="IO_solution_5.PNG">
 </p>
 
 
@@ -600,7 +600,7 @@ According to Pizza Runner's menu, Meatlovers cost $12 and Vegetarian, $10. Pizza
 *Solution:*
 
 <p align="center">
-    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_1.PNG" alt="PR_solution_1">
+    <img width="650" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_1.PNG" alt="PR_solution_1">
 </p>
 
 
