@@ -110,7 +110,10 @@ The code for this data cleaning can be found [here](https://github.com/HannahIgb
 **runners**
 The runners table shows the registration_date for each new runner. No data quality issues were discovered hence it is fit for analysis.
 
-![runners](Images/runners.PNG)    
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/runners.PNG" alt="runners">
+</p>
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -119,7 +122,7 @@ The runners table shows the registration_date for each new runner. No data quali
 At the moment, Pizza Runner only has 2 pizzas available: Meat Lovers and Vegetarian! No data quality issues discovered.
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/pizza_names.PNG" alt="pizza_recipes">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/pizza_names.PNG" alt="pizza_names">
 </p>
 
 
@@ -145,7 +148,7 @@ Contains all of the topping_name values with their corresponding topping_id valu
 
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_toppings.PNG" alt="pizza_recipes">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_toppings.PNG" alt="pizza_toppings">
 </p>
 
 
