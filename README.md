@@ -243,7 +243,7 @@ Now that Pizza Runner knows how many of each type of pizza was delivered, it fur
 The pizza_id was used to connect the customer_orders and pizza_names tables using an INNER JOIN. The results were then GROUPed first by the customer_id, followed by the name of the pizza_name.
 
 <p align="center">
-    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_5.PNG" alt="PM_solution_5">
+    <img width="300" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_5.PNG" alt="PM_solution_5">
 </p>
 
 
@@ -260,7 +260,7 @@ As earlier mentioned, a pizza order is seen as ‘delivered’ when neither the 
 In order to answer this I used an INNER JOIN to retrieve data from both tables and eliminate unrelated data thereby returning only rows where there was a match in both tables being joined.
 
 <p align="center">
-    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_6.PNG" alt="PM_solution_6">
+    <img width="300" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_6.PNG" alt="PM_solution_6">
 </p>
 
 
@@ -311,7 +311,10 @@ Next, Pizza runner wants to understand what the workload is like for each hour o
 
 From the customer_orders table, the HOUR of the day was extracted from the order_time column while the orders made within that hour period  was COUNTed. The results were GROUPed by the hour of the day and ORDERed from the highest to lowest orders made.
 
-![solution_9](Images/Pizza_metrics/PM_solution_9.PNG)
+<p align="center">
+    <img width="300" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_9.PNG" alt="PM_solution_9">
+</p>
+
 
 For more context, the 11th hour, for example, indicates the pizzas ordered between 11 a.m. to 12 p.m.The 13th (1pm), 18th (6pm), 21st (9pm), and 23rd (111pm) hour periods saw high volumes of pizza orders. From this, we see that customers are seen ordering pizza during lunch breaks, in the evenings as they head home, and as late-night snacks.
 
@@ -324,7 +327,10 @@ What day of the week is the busiest at Pizza Runner? They would like to know how
 
 The order_time column is in datetime format. In order to obtain the required values, I used the DAYOFWEEK and DAYNAME functions to extract the day of the week and day name from the order_time column in the customer_orders table.
 
-![solution_10](Images/Pizza_metrics/PM_solution_10.PNG)
+<p align="center">
+    <img width="300" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_10.PNG" alt="PM_solution_10">
+</p>
+
 
 For this analysis, Sunday is taken as day 1, Monday, day 2, etc. The midweek (Wednesday) and the end of the week (Saturday) saw the highest number of pizzas ordered. Friday had the fewest pizzas ordered.
 
@@ -373,7 +379,11 @@ An individual becomes a runner at Pizza Runner when they sign up and have been o
 To answer this, I selected the week number for each registration date, then added 2 days to the registration date using the INTERVAL keyword before calculating the week number using the WEEK function.
 It is important to note the 'INTERVAL 2 DAY' part of the code. I added this to standardize the week boundaries, especially because the data doesn't align with a particular week's starting day. For example, 2021–01–01 was a Friday and hence not the start of the week (for the sake of this analysis, I picked Sunday to be the start of the week). By adding a 2-day interval, I effectively shifted the starting point of the week from Friday to Sunday.
 
-![solution_1](Images/Runner_and_Cust_experience/RCE_solution_1.PNG)
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_1.PNG" alt="RCE_solution_1.PNG">
+</p>
+
 
 In the first week of January 2021, Pizza runner signed up two runners while in the second and third weeks, one runner each signed up.
 
@@ -384,7 +394,11 @@ Just how long, on average (i.e., the mean), did it take each runner to arrive at
 
 *Solution:*
 
-![solution_2](Images/Runner_and_Cust_experience/RCE_solution_2.PNG)
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_2.PNG" alt="RCE_solution_2.PNG">
+</p>
+
 
 On average runner two takes the most time.
 
@@ -401,7 +415,10 @@ Pizza Runner wants to know how long an order takes to be prepared based on the n
 
 *Solution:*
 
-![solution_3](Images/Runner_and_Cust_experience/RCE_solution_3.PNG)
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_3.PNG" alt="RCE_solution_3.PNG">
+</p>
 
 When Pizza Runner receives one order, it takes them about 12 minutes on average, 18 minutes for two, and 29 minutes for three. Ordinarily, you would expect that preparing two pizzas would take twice as long as preparing one pizza. In this case, Pizza Runner is efficient enough to cut down on the time taken to prepare more than one pizza. But this efficiency can be improved upon.
 
@@ -416,12 +433,14 @@ When Pizza Runner receives one order, it takes them about 12 minutes on average,
 
 On average, how far (distance) is a customer’s place from Pizza Runner’s HQ?
 
-
 *Solution:*
 
 Customer 105's location is the farthest from the entire customer base. On average, runners have to travel 25 kilometers to deliver their order. Customer 104’s location is the closest to the HQ, with an average distance of 10km.
 
-![solution_4](Images/Runner_and_Cust_experience/RCE_solution_4.PNG)
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_4.PNG" alt="RCE_solution_4.PNG">
+</p>
 
 
 **Recommendations**
@@ -438,7 +457,10 @@ In general, Pizza runner would like to know the longest and shortest delivery ti
 
 *Solution:*
 
-![solution_5](Images/Runner_and_Cust_experience/RCE_solution_5.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_5.PNG" alt="RCE_solution_5.PNG">
+</p>
+
 
 The longest time spent on a delivery was 40 minutes, and the shortest was 10 minutes which brings the difference to 30 minutes.
 
@@ -446,7 +468,10 @@ The longest time spent on a delivery was 40 minutes, and the shortest was 10 min
 
 *Solution:*
 
-![solution_6](Images/Runner_and_Cust_experience/RCE_solution_6.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_6.PNG" alt="RCE_solution_6.PNG">
+</p>
+
 
 The results above show the average speed of each runner for each delivery handled.
 
@@ -458,7 +483,10 @@ The successful delivery percentage for each runner refers to how many percent of
 
 The successful delivery percentage for each runner is based on the number of orders that were assigned to each of them.
 
-![solution_7](Images/Runner_and_Cust_experience/RCE_solution_7.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Runner_and_Cust_experience/RCE_solution_7.PNG" alt="RCE_solution_7.PNG">
+</p>
+
 
 
 Runner 1 achieved a perfect delivery rate, as they successfully completed all four assigned deliveries with no cancellations. Runner 2, on the other hand, was assigned four deliveries, with one cancellation by the customer, resulting in a 75% successful delivery rate. Runner 3 had the fewest assignments, managing two deliveries, but one of them was canceled by the restaurant, leading to an overall delivery success rate of 50%.
@@ -482,7 +510,10 @@ Pizza runner wants to have an overview of the ingredients that can be used to pr
 
 *Solution:*
 
-![solution_1](Images/Ingredient_optimization/IO_solution_1.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_1.PNG" alt="IO_solution_1.PNG">
+</p>
+
 
 The results show all the ingredients used to prepare the Meatlovers and Vegetarian pizza.
 
@@ -495,12 +526,18 @@ An ‘extra’ in Pizza Runner’s orders signifies a topping or ingredient cust
 
 To answer this question, I created a TEMPORARY table called customer_orders_cleaned. You can find the link for the code in my GitHub Repository. I created a temporary table as seen below so I could simplify complex queries rather than constructing intricate queries with numerous subqueries or joins.
 
-[Temporary table](Images/customer_orders_cleaned2.PNG)
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned2.PNG" alt="customer_orders_cleaned2">
+</p>
 
 
 Output:
 
-![solution_2](Images/Ingredient_optimization/IO_solution_2.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_2.PNG" alt="IO_solution_2.PNG">
+</p>
+
 
 The most common extra is Bacon, and the least common chicken.
 
@@ -511,7 +548,10 @@ Exclusions refer to toppings or ingredients requested to be excluded from their 
 
 *Solution:*
 
-![solution_3](Images/Ingredient_optimization/IO_solution_3.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_3.PNG" alt="IO_solution_3.PNG">
+</p>
+
 
 The most common exclusion is Cheese. It was excluded 5 times from the orders.
 
@@ -526,7 +566,9 @@ Pizza runner simply wants a table summarizing the order item for each record/ord
 
 *Solution:*
 
-![solution_4](Images/Ingredient_optimization/IO_solution_4.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_4.PNG" alt="IO_solution_4.PNG">
+</p>
 
 
 The summary table above shows the order item for each record/order made to Pizza runner.
@@ -538,7 +580,9 @@ Pizza runner does not want to keep going back and forth between tables trying to
 
 *Solution:*
 
-![solution_5](Images/Ingredient_optimization/IO_solution_5.PNG)
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_5.PNG" alt="IO_solution_5.PNG">
+</p>
 
 
 The table shows an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table.
