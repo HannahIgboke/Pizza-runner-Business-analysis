@@ -1,6 +1,7 @@
 /* Q1 If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - 
 how much money has Pizza Runner made so far if there are no delivery fees?
 */
+
 WITH prices_table AS (
 SELECT *,
 		CASE WHEN pizza_id = 1 THEN 12
@@ -27,13 +28,12 @@ GROUP BY pizza_id; -- This filters out results where the order was cancelled.
 -- Q2 What if there was an additional $1 charge for any pizza extras?Add cheese is $1 extra
 WITH pizza AS(
 		SELECT pizza_name,
-			   COUNT(*) AS pizza_count,
-			   CASE WHEN pizza_name = 'Meatlovers' THEN 12 
-					ELSE 10 END AS pizza_price,
-			   SUM(CASE WHEN extras IS NULL THEN 0 
-					WHEN CHAR_LENGTH(extras) = 1 THEN 1 
-                    WHEN extras LIKE '%4%' 
-						THEN CHAR_LENGTH(REPLACE(REPLACE(extras, ',', ''), ' ', '')) + 1
+		COUNT(*) AS pizza_count,
+		CASE WHEN pizza_name = 'Meatlovers' THEN 12 
+			ELSE 10 END AS pizza_price,
+		SUM(CASE WHEN extras IS NULL THEN 0 
+			WHEN CHAR_LENGTH(extras) = 1 THEN 1 
+                    	WHEN extras LIKE '%4%' THEN CHAR_LENGTH(REPLACE(REPLACE(extras, ',', ''), ' ', '')) + 1
 					ELSE 2 END) AS extras_count 
 		FROM pizza_names AS p
 		JOIN customer_orders AS c
@@ -41,7 +41,7 @@ WITH pizza AS(
 		GROUP BY pizza_name
 		)
 SELECT pizza_name,
-	   (pizza_count * pizza_price) + extras_count AS total_Amount_per_pizza,
+       (pizza_count * pizza_price) + extras_count AS total_Amount_per_pizza,
        SUM((pizza_count * pizza_price) + extras_count) OVER() AS total_amount
 FROM pizza;
 
@@ -116,12 +116,12 @@ GROUP BY c.order_id,
 -- and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
 WITH prices_and_delivery AS (
 SELECT 
-		pizza_name,
+	pizza_name,
         COUNT(c.pizza_id) AS number_of_times_ordered,
-		CASE WHEN pizza_name = 'Meatlovers' THEN 12
+	CASE WHEN pizza_name = 'Meatlovers' THEN 12
 	         ELSE 10 END AS price_for_one,
-		duration,
-		SUM(duration * 0.30) AS amt_spent_dist_traveled
+	duration,
+	SUM(duration * 0.30) AS amt_spent_dist_traveled
 FROM customer_orders AS c
 INNER JOIN runner_orders AS r
 USING(order_id)
