@@ -567,7 +567,7 @@ Pizza runner simply wants a table summarizing the order item for each record/ord
 *Solution:*
 
 <p align="center">
-    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_4.PNG" alt="IO_solution_4.PNG">
+    <img width="700" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_4.PNG" alt="IO_solution_4.PNG">
 </p>
 
 
@@ -581,7 +581,7 @@ Pizza runner does not want to keep going back and forth between tables trying to
 *Solution:*
 
 <p align="center">
-    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_5.PNG" alt="IO_solution_5.PNG">
+    <img width="700" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Ingredient_optimization/IO_solution_5.PNG" alt="IO_solution_5.PNG">
 </p>
 
 
@@ -599,7 +599,11 @@ According to Pizza Runner's menu, Meatlovers cost $12 and Vegetarian, $10. Pizza
 
 *Solution:*
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_1.PNG
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_1.PNG" alt="PR_solution_1">
+</p>
+
+
 
 Meatlovers were ordered nine times and made $108 for Pizza Runner, while Vegetarian ordered three times and made $30. Without charges for changes or deliveries, they made a total of $138.
 
@@ -610,7 +614,10 @@ Now, they need to know what their revenue would be with a $1 charge for any pizz
 
 *Solution:*
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_2.PNG
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_2.PNG" alt="PR_solution_2">
+</p>
+
 
 Meatlovers made the highest revenue since it was ordered the most, and Vegetarian the least. Totally, they'll make $167.
 
@@ -623,7 +630,11 @@ Here, Pizza Runner required that I create a database (or schema) for runner rati
 *Solution:*
 There are several ways to create this additional table for this dataset. For my analysis, I used the RAND() function in SQL to create a randomized rating system. This code can be further modified when data for customer ratings of runners becomes available.
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_3.PNG
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_3.PNG" alt="PR_solution_3">
+</p>
+
 
 The table above shows a newly generated table containing randomly assigned ratings for runners.
 
@@ -645,7 +656,11 @@ For simplicity and ease in Pizza Runner's operations they required a table that 
 
 To achieve the data I JOINed the three relevant tables: customer_orders, runner_orders, and runner_ratings, and filtered the results for only cases where the deliveries were succesful. The GROUP BY statement helps to organize and group the results by the values of interest.
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_4.PNG
+
+<p align="center">
+    <img width="700" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_4.PNG" alt="PR_solution_4">
+</p>
+
 
 The table above provides Pizza Runner with an overview of necessary information for every successful delivery.
 
@@ -656,7 +671,9 @@ Pizza Runner is testing different scenarios and how each scenario affects their 
 
 *Solution:*
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_5.PNG
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_5.PNG" alt="PR_solution_5">
+</p>
 
 As seen earlier in the analysis, if Pizza Runner charged nothing for changes, they would make a total of $138 for all successful orders. In the event they pay each runner $0.30 per km traveled, they would end up with a total of $49.80 after paying runners. They would have spent $62.70 to deliver Meatlovers and $25.50 for Vegetarian.
 
@@ -670,7 +687,10 @@ This indicates that Danny, the owner of Pizza Runner, is interested in adding ne
 Before I began my analysis, one of the first things I did was create a database for Pizza Runner's data. Since the database was well designed, adding a new pizza category was a relatively straightforward process without any significant disruption.
 I added this new menu option to the pizza_names and pizza_recipes tables using the INSERT INTO statement. After addition, the updated menu can be seen below:
 
-https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Updated_pizza_names_table.PNG
+
+<p align="center">
+    <img width="400" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Updated_pizza_names_table.PNG" alt="pizza_names_table">
+</p>
 
 
 ### Conclusion/Limitations
