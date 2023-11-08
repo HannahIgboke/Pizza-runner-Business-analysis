@@ -22,6 +22,8 @@ ON p.pizza_id = pn.pizza_id
 WHERE cancellation IS NULL
 GROUP BY pizza_id; -- This filters out results where the order was cancelled.
     
+------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Q2 What if there was an additional $1 charge for any pizza extras?Add cheese is $1 extra
 WITH pizza AS(
 		SELECT pizza_name,
@@ -42,6 +44,9 @@ SELECT pizza_name,
 	   (pizza_count * pizza_price) + extras_count AS total_Amount_per_pizza,
        SUM((pizza_count * pizza_price) + extras_count) OVER() AS total_amount
 FROM pizza;
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 /* Q3 The Pizza Runner team now wants to add an additional ratings system that allows customers to rate their runner. 
 how would you design an additional table for this new dataset - generate a schema for this new table 
@@ -64,7 +69,8 @@ FROM runner_orders;
 
 SELECT * 
 FROM runner_ratings;
-    
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 /* Q4 Using your newly generated table - can you join all of the information together to form a table which has 
 the following information for successful deliveries?
@@ -104,34 +110,39 @@ GROUP BY c.order_id,
     c.order_time,
 	r.pickup_time;
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Q5 If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras 
 -- and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
 WITH prices_and_delivery AS (
 SELECT 
 		pizza_name,
-        COUNT(c.pizza_id) AS pizza_count,
+        COUNT(c.pizza_id) AS number_of_times_ordered,
 		CASE WHEN pizza_name = 'Meatlovers' THEN 12
-	         ELSE 10 END AS prices,
-		SUM(duration * 0.30) AS delivery_distance
+	         ELSE 10 END AS price_for_one,
+		duration,
+		SUM(duration * 0.30) AS amt_spent_dist_traveled
 FROM customer_orders AS c
 INNER JOIN runner_orders AS r
 USING(order_id)
 INNER JOIN pizza_names AS pn
 ON c.pizza_id = pn.pizza_id
--- WHERE duration IS NOT NULL
+WHERE duration IS NOT NULL AND cancellation IS NULL
 GROUP BY pizza_name)
 
 SELECT
 	pizza_name,
-	pizza_count,
-	prices,
-	(pizza_count*prices) - delivery_distance AS Amt_left,
-	SUM((pizza_count*prices) - delivery_distance) OVER() AS Total_amt_left
+	number_of_times_ordered,
+	CONCAT('$',price_for_one) AS cost_for_one,
+    CONCAT('$', number_of_times_ordered * price_for_one) AS total_amt_made,
+    amt_spent_dist_traveled,
+	CONCAT('$', (number_of_times_ordered * price_for_one) - amt_spent_dist_traveled) AS Amt_left,
+	CONCAT('$', (SUM((number_of_times_ordered * price_for_one) - amt_spent_dist_traveled) OVER())) AS Total_amt_left
 
-FROM prices_and_delivery;
+FROM prices_and_delivery
+GROUP BY pizza_name;
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 /* Q6
 If Danny wants to expand his range of pizzas 
@@ -145,7 +156,7 @@ VALUES (3, 'Supreme Pizza');
 
 INSERT INTO pizza_recipes (pizza_id, toppings)
 VALUES (3, 1),
-	   (3, 2),
+       (3, 2),
        (3, 3),
        (3, 4),
        (3, 5),
