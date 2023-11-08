@@ -118,7 +118,10 @@ The runners table shows the registration_date for each new runner. No data quali
 
 At the moment, Pizza Runner only has 2 pizzas available: Meat Lovers and Vegetarian! No data quality issues discovered.
 
-![pizza_names](Images/pizza_names.PNG) 
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/pizza_names.PNG" alt="pizza_recipes">
+</p>
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -131,7 +134,7 @@ Each pizza_id has a standard set of toppings which are used as part of the pizza
 <p align="center">
     <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_recipes.PNG" alt="pizza_recipes">
 </p>
-![pizza_recipes](Images/pizza_recipes.PNG)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -140,7 +143,11 @@ Each pizza_id has a standard set of toppings which are used as part of the pizza
 
 Contains all of the topping_name values with their corresponding topping_id value. No data quality issues were discovered.
 
-![pizza_toppings](Images/pizza_toppings.PNG)  
+
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_toppings.PNG" alt="pizza_recipes">
+</p>
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
