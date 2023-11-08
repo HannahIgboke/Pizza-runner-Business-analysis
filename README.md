@@ -70,8 +70,10 @@ For the affected tables, the following issues were identified and treated:
 
 Customer pizza orders are captured in the customer_orders table with one row for each individual pizza that is part of the order. Exclusions and extras refers to the toppings the customer excluded or added to their order. The results from the EDA is shown below
 
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders.PNG" alt="customer_orders">
+</p>
 
-![customer_orders](Images/customer_orders.PNG)  
 
 The data quality issues observed included:
 - The presence of 'null' in the exclusions and extras columns instead of NULL to indicate unavailable entries
@@ -81,12 +83,17 @@ The code for this data cleaning can be found [here](https://github.com/HannahIgb
 
 The cleaned table looks like this:
 
-![cleaned customer orders_1](Images/customer_orders_cleaned.PNG)
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned.PNG" alt="customer_orders_cleaned">
+</p>
 
 
 After taking care of the comma seperated values, the tables looked like this:
 
-![cleaned customer orders_2](Images/customer_orders_cleaned2.PNG)
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned2.PNG" alt="customer_orders_cleaned2">
+</p>
+
 
 ------------------------------------------------
 
@@ -94,7 +101,10 @@ After taking care of the comma seperated values, the tables looked like this:
 
 Each order is assigned to a runner (given by the runner_id) - however not all orders are fully completed and can be cancelled by the restaurant or the customer. The pickup_time shows the timestamp which the runner picks up the orders, The distance and duration fields are related to how far and long the runner had to travel to deliver the order to the respective customer.
 
-|![runner_orders](Images/runner_orders.PNG)   
+<p align="center">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/runner_orders.PNG" alt="runner_orders">
+</p>
+
 
 Data quality issues observed include:
 - The pickup time, distance, and duration columns have inappropriate data types.
@@ -108,6 +118,7 @@ The code for this data cleaning can be found [here](https://github.com/HannahIgb
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **runners**
+
 The runners table shows the registration_date for each new runner. No data quality issues were discovered hence it is fit for analysis.
 
 <p align="center">
@@ -122,7 +133,7 @@ The runners table shows the registration_date for each new runner. No data quali
 At the moment, Pizza Runner only has 2 pizzas available: Meat Lovers and Vegetarian! No data quality issues discovered.
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/pizza_names.PNG" alt="pizza_names">
+    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/pizza_names.PNG" alt="pizza_names">
 </p>
 
 
