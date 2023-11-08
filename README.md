@@ -71,7 +71,7 @@ For the affected tables, the following issues were identified and treated:
 Customer pizza orders are captured in the customer_orders table with one row for each individual pizza that is part of the order. Exclusions and extras refers to the toppings the customer excluded or added to their order. The results from the EDA is shown below
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders.PNG" alt="customer_orders">
+    <img width="500" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders.PNG" alt="customer_orders">
 </p>
 
 
@@ -84,14 +84,14 @@ The code for this data cleaning can be found [here](https://github.com/HannahIgb
 The cleaned table looks like this:
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned.PNG" alt="customer_orders_cleaned">
+    <img width="500" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned.PNG" alt="customer_orders_cleaned">
 </p>
 
 
 After taking care of the comma seperated values, the tables looked like this:
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned2.PNG" alt="customer_orders_cleaned2">
+    <img width="500" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/customer_orders_cleaned2.PNG" alt="customer_orders_cleaned2">
 </p>
 
 
@@ -102,7 +102,7 @@ After taking care of the comma seperated values, the tables looked like this:
 Each order is assigned to a runner (given by the runner_id) - however not all orders are fully completed and can be cancelled by the restaurant or the customer. The pickup_time shows the timestamp which the runner picks up the orders, The distance and duration fields are related to how far and long the runner had to travel to deliver the order to the respective customer.
 
 <p align="center">
-    <img width="200" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/runner_orders.PNG" alt="runner_orders">
+    <img width="500" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/runner_orders.PNG" alt="runner_orders">
 </p>
 
 
