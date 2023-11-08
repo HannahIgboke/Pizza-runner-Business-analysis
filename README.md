@@ -181,7 +181,10 @@ Pizza runner is interested to know just how many orders they have received. This
 
 Based on the data provided, Pizza runner has received a total of 14 pizza orders from its customers.
 
-![solution_1](Images/Pizza_metrics/PM_solution_1.PNG)
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_1.PNG" alt="PM_solution_1">
+</p>
+
 
 
 **2. How many unique customer orders were made?**
@@ -189,9 +192,13 @@ Based on the data provided, Pizza runner has received a total of 14 pizza orders
 In Pizza runner, every order made is given an order_id which means that in one order more than one pizza can be ordered. Therefore Pizza runner wants to find out how many distinct orders were made. 
 
 *Solution:*
+
 From the customer_orders table, it was discovered that 10 unique/distinct orders have been made
 
-![solution_2](Images/Pizza_metrics/PM_solution_2.PNG)
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_2.PNG" alt="PM_solution_2">
+</p>
+
 
 
 **3. How many successful orders were delivered by each runner?**
@@ -203,7 +210,10 @@ P.S. Due to data privacy issues, each runner has been given an anonymized runner
 
 The answer to this question was reached by COUNTing the number of orders handled by each runner. The results were grouped by runner_id.
 
-![solution 3](Images/Pizza_metrics/PM_solution_3.PNG)
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_3.PNG" alt="PM_solution_3">
+</p>
+
 
 From the runner_orders table, a total of 10 orders were assigned to riders. Two of the orders were cancelled, one by the restaurant and the other by the customer. Runner 1 was seen to make the most deliveries, and runner 3 the least.
 
@@ -215,7 +225,11 @@ For now, Pizza Runner makes and delivers two types of pizzas: Meatlovers (pizza_
 
 To answer this I JOINed two tables: the customer_orders and the runner_orders tables, filtered for instances where the order was not cancelled (i.e cancellation IS NULL) and then grouped the results by the pizza_id.
 
-![solution_4](Images/Pizza_metrics/PM_solution_4.PNG)
+
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_4.PNG" alt="PM_solution_4">
+</p>
+
 
 Meatlovers Pizza received nine orders in all, and Vegetarian 3.
 
@@ -228,8 +242,10 @@ Now that Pizza Runner knows how many of each type of pizza was delivered, it fur
 
 The pizza_id was used to connect the customer_orders and pizza_names tables using an INNER JOIN. The results were then GROUPed first by the customer_id, followed by the name of the pizza_name.
 
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_5.PNG" alt="PM_solution_5">
+</p>
 
-![solution_5](Images/Pizza_metrics/PM_solution_5.PNG)
 
 In summary, we see that all the customers ordered more Meatlovers pizza except customer 105. Customer 105 appeared once in the customer_orders table because that was their first time placing their order. So 105’s first order was Vegetarian pizza.
 
@@ -243,7 +259,10 @@ As earlier mentioned, a pizza order is seen as ‘delivered’ when neither the 
 
 In order to answer this I used an INNER JOIN to retrieve data from both tables and eliminate unrelated data thereby returning only rows where there was a match in both tables being joined.
 
-![solution_6](Images/Pizza_metrics/PM_solution_6.PNG)
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_6.PNG" alt="PM_solution_6">
+</p>
+
 
 The results show that the maximum number of pizzas delivered in a single order is 3.
 
@@ -257,7 +276,12 @@ Pizza Runner affords its customers the opportunity to customize their orders. Th
 
 I used two CASE statements to solve this. The first CASE statement COUNTs the number of times where neither an exclusion or extra was made - no change. The second CASE statement searches for and COUNTs instances where either an exclusion or an extra was made. Again the results were filtered to return cases where the orders were not cancelled.
 
-![solution_7](Images/Pizza_metrics/PM_solution_7.PNG)
+
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_7.PNG" alt="PM_solution_7">
+</p>
+
+
 
 On two occasions, Customer 101's orders had no changes, while three of Customer 102’s orders had no changes. All three of 103’s orders had at least one change in them. Customer 104, who made 3 orders, made at least one change in one of them and no change in one of them. Customer 105's first order also had at least one change.
 
@@ -269,7 +293,11 @@ Based on customer preferences, they could add and remove a topping(s) from an or
 
 The method for solution follows the same pattern as the last question except that here, the CASE statement COUNTs instances where exclusions and extras were made that is, where exclusion and extras are NOT NULL.
 
-![solution_8](Images/Pizza_metrics/PM_solution_8.PNG)
+
+<p align="center">
+    <img width="250" src="https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Pizza_metrics/PM_solution_8.PNG" alt="PM_solution_8">
+</p>
+
 
 Results show that there was only one case where an exclusion and extras were made. This was made by customer 104.
 
