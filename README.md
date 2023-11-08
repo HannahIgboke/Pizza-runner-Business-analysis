@@ -498,11 +498,86 @@ The table shows an alphabetically ordered comma separated ingredient list for ea
 
 ### Pricing and ratings
 
-As a data analyst for Pizza runner I have been asked to create several tables and provide answers to some questions as shown below. These tables are required to give Pizza Runner a view of how different pricing and fees affects the overall cost and revenue. They are also interested in creating a rating system for their runners and adding a new pizza option to their menu.
+As a data analyst for Pizza runner I have been asked to create several tables and provide answers to some questions as shown below. These tables are required to give Pizza Runner a view of how different pricing and fees affects the overall cost and revenue. They are also interested in creating a rating system for their runners and adding a new pizza option to their menu. Check [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/Pricing_and_ratings.sql) for all the codes used to solve the questions below.
+
+**1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?**
+
+According to Pizza Runner's menu, Meatlovers cost $12 and Vegetarian, $10. Pizza Runner wants to know what its revenue would be if it didn't charge for changes (extras or exclusions) or deliveries.
+
+*Solution:*
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_1.PNG
+
+Meatlovers were ordered nine times and made $108 for Pizza Runner, while Vegetarian ordered three times and made $30. Without charges for changes or deliveries, they made a total of $138.
+
+
+**2. What if there was an additional $1 charge for any pizza extras? Add cheese is $1 extra.**
+
+Now, they need to know what their revenue would be with a $1 charge for any pizza extra.
+
+*Solution:*
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_2.PNG
+
+Meatlovers made the highest revenue since it was ordered the most, and Vegetarian the least. Totally, they'll make $167.
 
 
 
+**3. The Pizza Runner team now wants to add an additional ratings system that allows customers to rate their runner, how would you design an additional table for this new dataset - generate a schema for this new table and insert your own data for ratings for each successful customer order between 1 to 5.**
 
+Here, Pizza Runner required that I create a database (or schema) for runner ratings in order to allow customers rate their runner.
+
+*Solution:*
+There are several ways to create this additional table for this dataset. For my analysis, I used the RAND() function in SQL to create a randomized rating system. This code can be further modified when data for customer ratings of runners becomes available.
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_3.PNG
+
+The table above shows a newly generated table containing randomly assigned ratings for runners.
+
+**4. Using your newly generated table - can you join all of the information together to form a table which has the following information for successful deliveries?**
+  - customer_id
+  - order_id
+  - runner_id
+  - rating
+  - order_time
+  - pickup_time
+  - Time between order and pickup
+  - Delivery duration
+  - Average speed
+  - Total number of pizzas
+
+For simplicity and ease in Pizza Runner's operations they required a table that would present the above information at a glance for each successful deliveries. They also wanted the table to be in such a way that it can be updated with the availability of more data.
+
+*Solution:*
+
+To achieve the data I JOINed the three relevant tables: customer_orders, runner_orders, and runner_ratings, and filtered the results for only cases where the deliveries were succesful. The GROUP BY statement helps to organize and group the results by the values of interest.
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_4.PNG
+
+The table above provides Pizza Runner with an overview of necessary information for every successful delivery.
+
+
+**5. If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometer traveled - how much money does Pizza Runner have left over after these deliveries?**
+
+Pizza Runner is testing different scenarios and how each scenario affects their revenue and cost. In this case, they would like to know how much would be left from their total revenue of $138 if they paid each runner $0.30 per km traveled.
+
+*Solution:*
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Prices_and_ratings/PR_solution_5.PNG
+
+As seen earlier in the analysis, if Pizza Runner charged nothing for changes, they would make a total of $138 for all successful orders. In the event they pay each runner $0.30 per km traveled, they would end up with a total of $49.80 after paying runners. They would have spent $62.70 to deliver Meatlovers and $25.50 for Vegetarian.
+
+
+**6. If Danny wants to expand his range of pizzas - how would this impact the existing data design? Write an INSERT statement to demonstrate what would happen if a new Supreme pizza with all the toppings was added to the Pizza Runner menu?**
+
+This indicates that Danny, the owner of Pizza Runner, is interested in adding new pizza options to his menu, and he has also asked how this new addition would impact the existing data design.
+
+*Solution:*
+
+Before I began my analysis, one of the first things I did was create a database for Pizza Runner's data. Since the database was well designed, adding a new pizza category was a relatively straightforward process without any significant disruption.
+I added this new menu option to the pizza_names and pizza_recipes tables using the INSERT INTO statement. After addition, the updated menu can be seen below:
+
+https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/Images/Updated_pizza_names_table.PNG
 
 
 ### Conclusion/Limitations
