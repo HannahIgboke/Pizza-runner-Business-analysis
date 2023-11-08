@@ -80,6 +80,7 @@ The data quality issues observed included:
 The code for this data cleaning can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/customer_orders_table_cleaning.sql).
 
 The cleaned table looks like this:
+
 ![cleaned customer orders_1](Images/customer_orders_cleaned.PNG)
 
 
@@ -146,7 +147,7 @@ The data analysis stage is a critical component in enabling Pizza Runner's quest
 
 ### Pizza metrics
 
-All codes for this analysis can be found here. Pizza runner has posed the following business questions:
+All codes for this analysis can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/Pizza_metrics.sql). Pizza runner has posed the following business questions:
 
 **1. How many pizzas were ordered?**
 Pizza runner is interested to know just how many orders they have received. This is solved by COUNTing the number of instances where customers made an order as given by the customer_orders table.
