@@ -1,5 +1,6 @@
 # Pizza:pizza:-runner-Business-analysis
 
+**Aim**: Use descriptive analysis to answer business questions and make recommendations to optimize Pizza Runner's operations and drive sales.
 
 ![pizza_runner](Images/pizza_runner.png)
 
@@ -22,12 +23,12 @@
 ## Introduction
 
 Danny was browsing Instagram when he saw an ad for 80s retro styling and pizza. He loved the idea, but he knew he needed to do more than just sell pizza to get seed funding for his new business. So, he decided to Uberize it and create Pizza Runner, a pizza delivery service.
-Danny started by recruiting runners to deliver pizza from his house, which served as Pizza Runner Headquarters. He also maxed out his credit card to pay freelance developers to create a mobile app for customers to place orders. Pizza runner has come a long way and now needs to put its data collected into good use to better direct its runners and optimize operations.
+Danny started by recruiting runners to deliver pizza from his house, which served as Pizza Runner Headquarters. He also maxed out his credit card to pay freelance developers to create a mobile app for customers to place orders. Pizza runner has come a long way and now needs to put its data collected into good use **better direct its runners, optimize operations and improve sales**.
 
 P.S:This is challenge 2 — [Pizza runner](https://8weeksqlchallenge.com/case-study-2/) of the [8 Weeks SQL Challenge](https://8weeksqlchallenge.com/getting-started/) by Danny Ma.
 
 ## Problem statement
-In order for Pizza Runner to **better direct its runners and optimize operations**, it requires insights and recommendations on the following focus areas:
+In order for Pizza Runner to **better direct its runners, optimize operations and improve sales**, it requires insights and recommendations on the following focus areas:
 - Pizza Metrics
 - Runner and Customer Experience
 - Ingredient Optimisation
@@ -38,8 +39,8 @@ In order for Pizza Runner to **better direct its runners and optimize operations
 - Data wrangling in MySQL
 - Aggregate functions
 - SQL table joins
-- Common table expressions
-- Power BI
+- Common table expressions (CTE's)
+- Data Visualization using Power BI
 - Project documentation
 
 
@@ -79,7 +80,12 @@ The data quality issues observed included:
 The code for this data cleaning can be found [here](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/blob/main/SQL_files/customer_orders_table_cleaning.sql).
 
 The cleaned table looks like this:
-![cleaned customer orders](Images/pizza_runner.png)
+![cleaned customer orders_1](Images/customer_orders_cleaned.PNG)
+
+
+After taking care of the comma seperated values, the tables looked like this:
+
+![cleaned customer orders_2](Images/customer_orders_cleaned2.PNG)
 
 ------------------------------------------------
 
