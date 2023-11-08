@@ -393,12 +393,13 @@ In general, Pizza runner would like to know the longest and shortest delivery ti
 
 The longest time spent on a delivery was 40 minutes, and the shortest was 10 minutes which brings the difference to 30 minutes.
 
-**6. What was the average speed for each runner for each delivery ?**
+**6. What was the average speed for each runner for each delivery?**
 
 *Solution:*
 
 ![solution_6](Images/Runner_and_Cust_experience/RCE_solution_6.PNG)
 
+The results above show the average speed of each runner for each delivery handled.
 
 **7. What is the successful delivery percentage for each runner?**
 
@@ -419,13 +420,16 @@ Runner 1 achieved a perfect delivery rate, as they successfully completed all fo
 - A weekly feedback and review form should be rolled out and enabled on the mobile app or website or sent directly to customers' emails in order to gather more specific data to generate insights on customer satisfaction.
 - Data should be collected on reasons for order cancellations to enable the pizza runner to identify present and potential loopholes.
 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Ingredient optimization
 
 Here, Pizza Runner is more concerned with basic knowledge of the common extras and exclusions in their pizza orders, as well as having handy summary tables they can quickly look at to understand the nature of customers' orders.
 
 **1. What are the standard ingredients for each pizza?**
 
-Pizza runner wants to have an overview of the ingredients used to prepare each pizza.
+Pizza runner wants to have an overview of the ingredients that can be used to prepare each pizza.
 
 *Solution:*
 
@@ -469,7 +473,7 @@ Meat Lovers - Exclude Beef
 Meat Lovers - Extra Bacon
 Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
 
-Here, Pizza runner simply wants a table showing the order item for each record/order made to Pizza runner.
+Pizza runner simply wants a table summarizing the order item for each record/order made to Pizza runner.
 
 *Solution:*
 
@@ -490,7 +494,13 @@ Pizza runner does not want to keep going back and forth between tables trying to
 
 The table shows an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Pricing and ratings
+
+As a data analyst for Pizza runner I have been asked to create several tables and provide answers to some questions as shown below. These tables are required to give Pizza Runner a view of how different pricing and fees affects the overall cost and revenue. They are also interested in creating a rating system for their runners and adding a new pizza option to their menu.
+
+
 
 
 
