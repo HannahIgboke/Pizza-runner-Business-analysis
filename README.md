@@ -18,7 +18,7 @@
   - [Runner and customer experience](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#runner-and-customer-experience)
   - [Ingredient optimization](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#ingredient-optimization)
   - [Pricing and ratings](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#pricing-and-ratings)
-- Conclusion and Limitations
+- [Conclusion and Limitations](https://github.com/HannahIgboke/Pizza-runner-Business-analysis/edit/main/README.md#conclusionlimitations)
 
 ## Introduction
 
