@@ -40,7 +40,6 @@ In order for Pizza Runner to **better direct its runners, optimize operations an
 - Aggregate functions
 - SQL table joins
 - Common table expressions (CTE's)
-- Data Visualization using Power BI
 - Project documentation
 
 
