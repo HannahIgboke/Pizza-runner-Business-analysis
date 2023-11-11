@@ -694,5 +694,5 @@ I added this new menu option to the pizza_names and pizza_recipes tables using t
 
 ### Conclusion/Limitations
 
-This project was truly enjoyable for me especially because as it significantly expanded my SQL skills and vocabulary and think critically about problem-solving and the most efficient approaches to solutions. CTE’s are now my next favorite thing after porridge beans 😄. However, while working on this project, I faced a significant challenge related to the data provided. The issue primarily revolved around the limited size of the sample data, which did not accurately reflect the entire dataset and, as a result, introduced the potential for bias.
+This project was truly enjoyable for me especially because as it significantly expanded my SQL skills and vocabulary and think critically about problem-solving and the most efficient approaches to solutions. CTE’s are now my next favorite thing after porridge beans 😄. However, while working on this project, I faced a significant challenge related to the data provided. The issue primarily revolved around the limited size of the sample data, which did not accurately reflect the entire dataset and, as a result, introduced the potential for bias. Thank you for following through.
 
